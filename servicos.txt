@@ -1,0 +1,53 @@
+Encanador
+Um Encanador ou Bombeiro Hidráulico é  responsável pela instalação e manutenção de sistemas usados para água potável, esgoto e drenagem em sistemas de encanamento.
+
+Eletricista
+O Eletricista é o especialista em instalações elétricas residenciais, prediais e industriais. Podem ser empregados em instalação de novas componentes elétricas ou em manutenção e reparação de infra-estruturas elétricas existentes.
+
+Pintor
+O Pintor é o profissional responsável pela proteção e decoração de paredes. E têm como proposito melhorar os aspetos estéticos e a sua proteção contra os efeitos da água, corrosão, insetos e fungos (bolores).
+
+Pedreiro
+O Pedreiro é o profissional que constrói ou reveste muros, paredes, escadas, vigas, lajes, tetos, telhados, chaminés, etc., em edifícios e outras obras de construção geralmente orientado pelo engenheiro ou Mestre de obras.
+
+Instalador Montador
+O Instalador ou Montador em é a denominação de cargo do profissional que atua na montagem de móveis, na instalação de equipamentos e utensílios domésticos na residência ou em empresas.
+
+Marceneiro
+O Marceneiro é o profissional responsável por trabalhar com madeira, construindo e reparando móveis, peças decorativas, utilitárias e outras peças de madeira.. Realiza a medição, entalho, raspagem, ajuste e fixação. 
+
+Serralheiro
+O Serralheiro é o profissional responsável por atuar com a realização de cortes de tubos, alumínios e acabamentos de peças. Um Serralheiro irá atuar com corte dobra traçagem, interpretação de desenho, medidas, solda, eletrodo, e acetileno.
+
+Gesseiro
+O Gesseiro é um profissional que recompõem placas, peças e superfícies de gesso. Faz revestimentos e rebaixamentos em tetos e parede. Realizam decorações e montam paredes divisórias com blocos e painéis de gesso.
+
+Chaveiro
+O Chaveiro é o profissional responsável por fabricar e fazer cópias de chaves, trocar segredos e realizar manutenção de fechaduras, além de vender equipamentos de segurança (cadeados, travas, chaves personalizadas etc.).
+
+Vidraceiro
+O Vidraceiro prepara máquinas , equipamentos e instrumentos para corte de vidros. Cortam, e instalam vidros, vitrais e espelhos. temperam vidros e montam vidros temperados. confeccionam, lapidam e pintam vitrais.
+
+Jardineiro
+O Jardineiro é o profissional responsável por cuidar do jardim dos prédios, casas, empresas, parques, condomínios, escolas e etc. É essencial que tenha conhecimentos básicos em relação o meio ambiente e espécies de plantas.
+
+Piscineiro
+A função principal do piscineiro será manter sua piscina pronta para o uso. Para fazer isso, ele precisará realizar a manutenção de diversas maneiras. Isso vai garantir a limpeza e a pureza da água.
+
+Dedetizador
+O dedetizador é o profissional habilitado no combate a pragas: escorpiões, lacraias, moscas, mosquitos, baratas, pulgas, traças, percevejos, carrapatos… A infinidade de insetos que podem atingir sua casa, condomínio ou empresa é imensa, mas não se pode perder o controle para combatê-las.
+
+Técnico em Informática
+Um Técnico em Informática é o profissional que está apto a realizar configurações em computadores, redes de internet, instalar equipamentos e a verificar as causas de falhas.
+
+Técnico em Refrigeração
+O Técnico em Refrigeração e Climatização é um profissional preparado para projetar, instalar e dar manutenção em sistemas de refrigeração e climatização, seguindo legislação e normas técnicas, ambientais, de saúde e segurança no trabalho.
+
+Desentupidora
+Oferecemos o Serviço de Desentupidora com atendimento rápido e de qualidade para atender qualquer tipo de emergência na área de desentupimento. Conte conosco para desentupir: Pias, Ralos, Tanques, Colunas, Vasos sanitários, Caixas de gordura, Tubulação de água e Esgotos em geral.
+
+Fretes e Mudanças
+Buscando uma equipe especializada em transporte de mercadorias, mudança ou pequenos fretes? Conheça nossos serviços oferecidos. Nos destacamos da concorrência pelo atendimento de altíssimo nível e serviço rápido e eficiente. Estamos preparados para fazer mudanças locais, interestaduais.
+
+Serviços de Limpeza
+Precisando de serviço de limpeza em sua casa, apartamento ou escritório? Temos profissionais capacitadas para garantir um serviço de limpeza residencial confiável e de qualidade, com profissionais selecionadas e treinadas, visando garantir a excelência de seu trabalho e a melhor experiência a você e a sua família!

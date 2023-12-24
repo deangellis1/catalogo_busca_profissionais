@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+  Profissionais
+{% endblock page_title %}
+
+{% block radios %}
+
+
+      <div class="d-grid gap-2 pt-5">
+        <a class="btn btn-lg btn-primary" href="{% url 'home' %}">Retornar</a>
+      </div>
+  
+   
+
+{% endblock radios%}
+
+
+{% block content %}
+<style type="text/css">
+  body{margin-top:20px;
+  background:#eee;
+  }
+  
+  /* ===== ABOUT PAGE ===== */
+  .team-item {
+  padding: 35px;
+  padding-right: 0;
+  position: relative;
+  z-index: 0;
+  }
+  
+  .team-item:after, .team-item:before {
+  content: "";
+  position: absolute;
+  -webkit-box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
+        box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
+  border-radius: 10px;
+  z-index: -1;
+  }
+  
+  .team-item:before {
+  height: 100%;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  right: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  }
+  
+  .team-item:after {
+  height: 6px;
+  width: calc(100% - 30px);
+  background-color: rgb(65, 138, 182);
+  left: 0;
+  bottom: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  }
+  
+  .team-item:hover:after {
+  height: 100%;
+  }
+  
+  .team-item .img-holder {
+  -ms-flex-negative: 0;
+    flex-shrink: 0;
+  -webkit-box-shadow: 0 0 20px 0 rgba(51, 51, 51, 0.2);
+        box-shadow: 0 0 20px 0 rgba(51, 51, 51, 0.2);
+  border-radius: 10px;
+  width: calc(100% - 70px);
+  margin-left: 70px;
+  overflow: hidden;
+  }
+  
+  .team-item .img-holder img {
+  border-radius: 10px;
+  width: 100%;
+  -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  }
+  
+  .team-item:hover .img-holder img {
+  -webkit-transform: scale(1);
+        transform: scale(1);
+  }
+  
+  .team-item .socials {
+  position: absolute;
+  }
+  
+  .team-item .socials a {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  .team-item .socials a:last-of-type {
+  margin-bottom: 0;
+  }
+  
+  .team-item .team-content {
+  margin-right: 70px;
+  text-align: center;
+  }
+  
+  .team-item .team-content h5 {
+  color: #101f41;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  }
+  
+  .team-item .team-content p {
+  color: rgb(65, 138, 182);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  font-weight: 600;
+  font-size: 14px;
+  }
+  
+  .team-item:hover .team-content h5, .team-item:hover .team-content p {
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  }
+  
+  .d-inline-block {
+  display: inline-block!important;
+  }
+  
+  .socials a {
+  width: 35px;
+  height: 35px;
+  background-color: #6893e1;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 3px 2px 0 #516cd9;
+  box-shadow: 0 3px 2px 0 #516cd9;
+  text-align: center;
+  color: #fff;
+  padding-top: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  }
+  
+  .mb-2, .my-2 {
+  margin-bottom: .5rem!important;
+  }
+  
+  h5 {
+  font-size: 21px;
+  }
+  
+  .mb-30 {
+  margin-bottom: 30px;
+  }
+  </style> 
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+      
+      <hr>
+  
+        <div class="container">
+          <div class="row section-heading justify-content-center text-center wow fadeInUp"
+            data-wow-duration="0.3s"
+            data-wow-delay="0.3s"
+            style="
+            visibility: visible;
+            animation-duration: 0.3s;
+            animation-delay: 0.3s;
+            animation-name: fadeInUp;
+            ">
+            <div class="pb-2 mb-3">
+                <h3 class="h1 bg-primary-after after-50px pb-1 mb-1">
+                    Ajeita Aqui
+                </h3>
+                <div class="lead">
+                    O maior catálogo de profissionais da região. É <strong>gratuito para pesquisar</strong> e <strong>gratuito para se cadastrar</strong>.<br>
+                    Indique a página para os profissionais de sua confiança e ajude outras pessoas a terem serviços de qualidade.
+                </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+          {% for professional in filtered_professionals %}
+          <div class="col-md-6 col-lg-4 mb-30">
+          <div class="team-item">
+            <div class="mb-30 position-relative d-flex align-items-center">
+              <span class="socials d-inline-block">
+              <a href="tel:0{{professional.whatsapp_number}}" class="zmdi zmdi-phone"></a>
+              <a href="https://wa.me/55{{professional.whatsapp_number}}" class="zmdi zmdi-whatsapp"></a>
+              <a href="mailto:{{professional.email}}" class="zmdi zmdi-email"></a>
+              <a href="https://instagram.com/{{professional.instagram_user}}" class="zmdi zmdi-instagram"></a>
+              </span>
+              <span class="img-holder d-inline-block">
+                  {% if professional.avatar %}
+                      <a href="{% url 'details' professional.id %}">
+                          <img
+                          src="{{ professional.avatar.url }}"
+                          alt="professional avatar"
+                          />
+                      </a>
+                  {% else %}
+                      <a href="{% url 'details' professional.id %}">
+                          <img
+                          src="{% static 'images/avatar1.png' %}"
+                          alt="professional avatar"
+                          />
+                      </a>
+                  {% endif %}
+              </span>
+            </div>
+          <div class="team-content">
+          <h5 class="mb-2">{{ professional.name }}</h5>
+          <p class="text-uppercase mb-0">
+              {% for service in professional.services_provided.all %}
+                  / {{ service.service }} /
+              {% endfor %}</p>
+          </div>
+          </div>
+          </div>
+          
+          {% empty %}
+
+          <div class="alert alert-dismissible alert-warning">
+            <strong>Ooooops!</strong> Nenhum profissional na área!!! <a href="{% url "register" %}" class="alert-link">Clique aqui e seja o primeiro.</a>
+          </div>
+            
+          {% endfor %}
+          
+        </div>
+      </div>
+    </section>
+
+{% endblock content %}

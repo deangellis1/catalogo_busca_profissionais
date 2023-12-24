@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+  Serviços
+{% endblock page_title %}
+
+{% block content %}
+  <h1 class="pt-5">Serviços disponíveis</h1>
+    <div class="accordion pt-2" id="accordionExample">
+      {% for service in services_list %}
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <strong>{{service.service}}</strong>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            {{service.description}}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+{% endblock content %}

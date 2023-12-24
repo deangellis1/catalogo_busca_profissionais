@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+  Profissionais
+{% endblock page_title %}
+
+
+
+{% block radios %}
+
+  <form action="{% url 'results' %}" method="POST">{% csrf_token %}   
+      <div class="form-group">
+        <label for="city" class="form-label mt-4">Selecione uma cidade</label>
+        <select class="form-select" id="selectCidade" name="city" onchange="atualizarCidade()">
+          <option value="0" selected>Cidades disponíveis</option>
+          {% for city in cities %}
+          <option value="{{city.pk}}">{{city.city_name}}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+  <hr>
+
+      {% for service in services %}
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" value="{{service.pk}}" name="service" id="btnradio{{service.pk}}" autocomplete="off" checked="">
+          <label class="btn btn-outline-primary" for="btnradio{{service.pk}}">{{service.service}}</label> 
+      </div>
+      {% endfor %}
+
+      <div class="d-grid gap-2 mt-2">
+        <button class="btn btn-lg btn-primary" type="submit">Filtrar</button>
+      </div>
+  
+  </form> 
+
+{% endblock radios%}
+
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/card_styles.css' %}" /> 
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    
+      <hr>
+    <section id="team" class="section bg-gray-100 mt-3">
+      <div class="container">
+        <div
+          class="row section-heading justify-content-center text-center wow fadeInUp"
+          data-wow-duration="0.3s"
+          data-wow-delay="0.3s"
+          style="
+            visibility: visible;
+            animation-duration: 0.3s;
+            animation-delay: 0.3s;
+            animation-name: fadeInUp;
+          "
+        >
+          <div class="col-lg-8 col-xl-6">
+            <h3 class="h1 bg-primary-after after-50px pb-3 mb-3">
+              Nossos Profissionais
+            </h3>
+            <div class="lead">
+              Mombo is a HTML5 template based on Sass and Bootstrap 5 with
+              modern and creative multipurpose design you can use it as a
+              startups.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          
+          {% for professional in professionals %}
+          <div
+            class="col-lg-3 col-sm-6 my-3 wow fadeInUp"
+            data-wow-duration="0.3s"
+            data-wow-delay="0.3s"
+            style="
+              visibility: visible;
+              animation-duration: 0.3s;
+              animation-delay: 0.3s;
+              animation-name: fadeInUp;
+            "
+          >
+            <div class="hover-top-in text-center">
+              <div class="overflow-hidden z-index-1 position-relative px-5">
+                {% if professional.avatar %}
+                  <a href="{% url 'details' professional.id %}">
+                    <img
+                    class="rounded-circle border border-5 border-white shadow"
+                    src="{{ professional.avatar.url }}"
+                    title
+                    alt
+                    />
+                  </a>
+                {% else %}
+                  <a href="{% url 'details' professional.id %}">
+                    <img
+                    class="rounded-circle border border-5 border-white shadow"
+                    src="{% static 'images/avatar7.png' %}"
+                    title
+                    alt
+                    />
+                  </a>
+                {% endif %}
+              </div>
+              <div
+                class="mx-2 mx-xl-3 shadow rounded-3 position-relative mt-n4 bg-white p-4 pt-6 mx-4 text-center hover-top--in"
+              >
+                <h6 class="fw-700 dark-color mb-1">{{ professional.name }}</h6>
+                <small>
+                    {% for service in professional.services_provided.all %}
+                        / {{ service.service }} /
+                    {% endfor %}
+                </small>
+                <div class="pt-2">
+                  <a
+                    class="icon-md bg-primary rounded-circle me-1 text-white"
+                    href="tel:0{{professional.whatsapp_number}}"
+                    target="_blank"
+                    ><i class="bi bi-phone"></i
+                  ></a>
+                  <a
+                    class="icon-md bg-primary rounded-circle me-1 text-white"
+                    href="https://wa.me/55{{professional.whatsapp_number}}"
+                    target="_blank"
+                    ><i class="bi bi-whatsapp"></i
+                  ></a>
+                  <a
+                    class="icon-md bg-primary rounded-circle me-1 text-white"
+                    href="https://instagram.com/{{professional.instagram_user}}"
+                    target="_blank"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                  <a
+                    class="icon-md bg-primary rounded-circle me-1 text-white"
+                    href="#"
+                    target="_blank"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {% empty %}
+
+          <div class="alert alert-dismissible alert-primary">
+            <strong>Ooooops!</strong> Nenhum profissional na área!!! <a href="{% url "register" %}" class="alert-link">Clique aqui e seja o primeiro.</a>
+          </div>
+            
+          {% endfor %}
+          
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function atualizarCidade() {
+          // Obtém o valor da cidade selecionada
+          var select = document.getElementById("selectCidade");
+          var option = select.children[select.selectedIndex];
+          var cidadeSelecionada = option.textContent;
+
+          // Atualiza o texto do elemento span
+          document.getElementById("cidadeEscolhida").innerText = cidadeSelecionada;
+      }
+    </script>
+{% endblock content %}
