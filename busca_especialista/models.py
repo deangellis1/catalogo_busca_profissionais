@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 class Services(models.Model):
-    service = models.CharField(max_length=20, unique=True)
-    description = models.CharField(max_length=240, null=True, blank=True)
+    service = models.CharField(max_length=25, unique=True)
+    description = models.CharField(max_length=300, null=True, blank=True)
 
     def __str__(self):
         return self.service
@@ -17,9 +17,9 @@ class Cities(models.Model):
 
 class Professional(models.Model):
     name = models.CharField(verbose_name="Nome", max_length=50)
-    whatsapp_number = models.CharField(verbose_name="Whatsapp",max_length=11)
-    instagram_user = models.CharField(verbose_name="Instagram",max_length=20, null=True, blank=True)
-    email = models.EmailField(verbose_name="E-mail", max_length=30, null=True, blank=True)
+    whatsapp_number = models.CharField(verbose_name="Whatsapp",max_length=15)
+    instagram_user = models.CharField(verbose_name="Instagram",max_length=30, null=True, blank=True)
+    email = models.EmailField(verbose_name="E-mail", max_length=50, null=True, blank=True)
     services_provided = models.ManyToManyField(Services, verbose_name="Serviços Prestados")
     cities_attended = models.ManyToManyField(Cities, verbose_name="Cidades Atendidas")
     avatar = models.ImageField(upload_to='avatares/', null=True, blank=True)
