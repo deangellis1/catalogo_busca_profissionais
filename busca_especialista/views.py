@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, CreateView
 from django.urls import reverse_lazy
 from django.core.paginator import Paginator
+import re
 
 from .models import *
 
@@ -53,16 +54,31 @@ def details(request, professional_id):
 class ProfessionalListView(ListView):
     model = Professional
     queryset = Professional.objects.filter(active=True)
-    """
+"""
 
 
 class ServicesListView(ListView):
     model = Services
     
 
-
 class ProfessionalCreateView(CreateView):
     model = Professional
     fields = ["name", "whatsapp_number", "instagram_user", "email", "services_provided", "cities_attended", "avatar"]
     success_url = reverse_lazy("home")
 
+    def form_valid(self, form):
+        # Obtém o número do WhatsApp do formulário e remove caracteres não numéricos
+        whatsapp_number = form.cleaned_data['whatsapp_number']
+        only_numbers = re.sub(r'\D', '', whatsapp_number)  # Remove tudo que não é dígito
+        form.instance.whatsapp_number = only_numbers
+        
+        return super(ProfessionalCreateView, self).form_valid(form)
+
+
+"""
+class ProfessionalCreateView(CreateView):
+    model = Professional
+    fields = ["name", "whatsapp_number", "instagram_user", "email", "services_provided", "cities_attended", "avatar"]
+    success_url = reverse_lazy("home")
+
+"""
