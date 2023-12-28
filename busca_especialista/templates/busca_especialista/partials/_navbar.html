@@ -1,6 +1,6 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg bg-primary fixed-top" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-light fixed-top" data-bs-theme="light">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'home' %}">
         <img src="{% static 'images/ajeita_aqui.png' %}" alt="Ajeita Aqui" width="100">
@@ -25,7 +25,7 @@
             <a class="nav-link" href="{% url 'about' %}">Sobre</a>
           </li>
         </ul>
-        <span class="text-body-tertiary pe-2" id="cidadeEscolhida">AjeitaAqui.com</span><i class="fa-solid fa-map-location-dot p-2"></i>
+        <span class="text-body-tertiary pe-2" id="cidadeEscolhida"><em>Beta - version 0.0.1</em></span><i class="fa-solid fa-wand-magic-sparkles p-2"></i>
       </div>
     </div>
   </nav>
