@@ -157,10 +157,10 @@ border-radius: 0.25rem!important;
 </div>
     <ul class="list-unstyled mb-1-9">
     <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Serviços:</span> {% for service in professional.services_provided.all %}/ {{ service.service }} /{% endfor %}</li>
-    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">WhatsApp:</span> <a class="nrwhatsapp" href="https://wa.me/55{{professional.whatsapp_number}}">{{professional.whatsapp_number}}</a></li>
-    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> <a href="mailto:{{professional.email}}" class="__cf_email__">{{professional.email}}</a></li>
-    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Instagram:</span> <a href="https://instagram.com/{{professional.instagram_user}}">{{professional.instagram_user}}</a></li>
-    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Telefone:</span> <a class="nrwhatsapp" href="tel:{{professional.whatsapp_number}}">{{professional.whatsapp_number}}</a> </li>
+    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">WhatsApp:</span> <a class="nrwhatsapp" href="https://wa.me/55{{professional.whatsapp_number}}" target="_blank">{{professional.whatsapp_number}}</a></li>
+    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Email:</span> <a href="mailto:{{professional.email}}" class="__cf_email__" target="_blank">{{professional.email}}</a></li>
+    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Instagram:</span> <a href="https://instagram.com/{{professional.instagram_user}}" target="_blank">{{professional.instagram_user}}</a></li>
+    <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Telefone:</span> <a class="nrwhatsapp" href="tel:{{professional.whatsapp_number}}" target="_blank">{{professional.whatsapp_number}}</a> </li>
     <li class="display-28"><span class="display-26 text-secondary me-2 font-weight-600">Cadastrado em:</span> {{professional.date_joined}}</li>
     </ul>
     <ul class="social-icon-style1 list-unstyled mb-0 ps-0">

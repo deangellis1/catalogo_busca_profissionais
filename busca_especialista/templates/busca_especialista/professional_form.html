@@ -10,7 +10,7 @@
 {% block content %}
         <h1 class="pt-5">Cadastro de profissionais, honestos e bons trabalhadores</h1>
         
-        <form action="" method="POST" class="form-control pb-3" enctype="multipart/form-data">
+        <form id="myForm" method="POST" class="form-control pb-3" enctype="multipart/form-data">
           {% csrf_token %}
           {{ form | crispy }}
 
@@ -41,7 +41,15 @@
         }
     };
 
-    $('#id_whatsapp_number').mask(SPMaskBehavior, spOptions);    
+    $('#id_whatsapp_number').mask(SPMaskBehavior, spOptions);   
+
+
+    $("#myForm").submit(function(event){
+      // Exibe o alerta
+      alert("Obrigado! Seu cadastro foi submetido para análise e logo estará visível.");
+
+      // O evento de submissão continua normalmente após fechar o alerta
+   });
     
   });
   
