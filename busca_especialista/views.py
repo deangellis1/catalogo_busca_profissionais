@@ -9,8 +9,8 @@ from .models import *
 
 def professional_list(request):
     professional_list = Professional.objects.filter(active=True).order_by('-instagram_user')
-    services = Services.objects.all()
-    cities = Cities.objects.all()
+    services = Services.objects.all().order_by('service')
+    cities = Cities.objects.all().order_by('city_name')
 
     paginator = Paginator(professional_list, 12)
 
